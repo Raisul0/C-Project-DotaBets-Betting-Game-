@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{00AF920F-F239-46FE-80D3-25A61356F5E3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OOP2</RootNamespace>
+    <AssemblyName>OOP2</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddAdmin.Designer.cs">
+      <DependentUpon>AddAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminCUser.Designer.cs">
+      <DependentUpon>AdminCUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminHome.Designer.cs">
+      <DependentUpon>AdminHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminInfo.cs" />
+    <Compile Include="ChangeP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeP.Designer.cs">
+      <DependentUpon>ChangeP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Check.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Check.Designer.cs">
+      <DependentUpon>Check.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckP.Designer.cs">
+      <DependentUpon>CheckP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomeUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomeUser.Designer.cs">
+      <DependentUpon>HomeUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MatchResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MatchResult.Designer.cs">
+      <DependentUpon>MatchResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyDB.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyDB.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="PredictionHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PredictionHistory.Designer.cs">
+      <DependentUpon>PredictionHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profile.Designer.cs">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reg.Designer.cs">
+      <DependentUpon>Reg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectUpdate.Designer.cs">
+      <DependentUpon>SelectUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetupM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetupM.Designer.cs">
+      <DependentUpon>SetupM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateCh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateCh.Designer.cs">
+      <DependentUpon>UpdateCh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateDB.Designer.cs">
+      <DependentUpon>UpdateDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateDBLin.cs" />
+    <Compile Include="UpdateDel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateDel.Designer.cs">
+      <DependentUpon>UpdateDel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Userinfo.cs" />
+    <Compile Include="UserBet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserBet.Designer.cs">
+      <DependentUpon>UserBet.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddAdmin.resx">
+      <DependentUpon>AddAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminCUser.resx">
+      <DependentUpon>AdminCUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminHome.resx">
+      <DependentUpon>AdminHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeP.resx">
+      <DependentUpon>ChangeP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Check.resx">
+      <DependentUpon>Check.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckP.resx">
+      <DependentUpon>CheckP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomeUser.resx">
+      <DependentUpon>HomeUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="MyDB.dbml.layout">
+      <DependentUpon>MyDB.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="MatchResult.resx">
+      <DependentUpon>MatchResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PredictionHistory.resx">
+      <DependentUpon>PredictionHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profile.resx">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Reg.resx">
+      <DependentUpon>Reg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectUpdate.resx">
+      <DependentUpon>SelectUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetupM.resx">
+      <DependentUpon>SetupM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateCh.resx">
+      <DependentUpon>UpdateCh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateDB.resx">
+      <DependentUpon>UpdateDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateDel.resx">
+      <DependentUpon>UpdateDel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserBet.resx">
+      <DependentUpon>UserBet.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="MyDB.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>MyDB.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DotaDB.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DotaDB_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>DotaDB.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

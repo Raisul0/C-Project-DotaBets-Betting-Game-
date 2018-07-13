@@ -1,0 +1,5 @@
+F:\Important Documents\Project\Solution1\OOP2\bin\Debug\OOP2.exe.config
+F:\Important Documents\Project\Solution1\OOP2\obj\Debug\Login.Form1.resources
+F:\Important Documents\Project\Solution1\OOP2\obj\Debug\OOP2.Properties.Resources.resources
+F:\Important Documents\Project\Solution1\OOP2\obj\Debug\Login.Reg.resources
+F:\Important Documents\Project\Solution1\OOP2\obj\Debug\OOP2.csproj.GenerateResource.Cache

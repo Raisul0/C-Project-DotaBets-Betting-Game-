@@ -1,0 +1,7 @@
+F:\Important Documents\Project\Demo\Demo\bin\Debug\Demo.exe.config
+F:\Important Documents\Project\Demo\Demo\bin\Debug\Demo.exe
+F:\Important Documents\Project\Demo\Demo\bin\Debug\Demo.pdb
+F:\Important Documents\Project\Demo\Demo\obj\Debug\Demo.Properties.Resources.resources
+F:\Important Documents\Project\Demo\Demo\obj\Debug\Demo.csproj.GenerateResource.Cache
+F:\Important Documents\Project\Demo\Demo\obj\Debug\Demo.exe
+F:\Important Documents\Project\Demo\Demo\obj\Debug\Demo.pdb

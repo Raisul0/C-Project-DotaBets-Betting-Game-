@@ -1,0 +1,117 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace OOP2
+{
+    public partial class LinkQ : Form
+    {
+        public LinkQ()
+        {
+            InitializeComponent();
+        }
+
+        public void getData()
+        {
+            MyDBDataContext cntx = new MyDBDataContext(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=D:\Demo\OOP2\Person.mdf;Integrated Security=True;Connect Timeout=30");
+            dataGridView1.DataSource = cntx.Infos;
+            var str = from a in cntx.Infos
+                      select a.Id;
+            comboBox1.DataSource = str;
+       
+   
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MyDBDataContext cntx = new MyDBDataContext(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=D:\Demo\OOP2\Person.mdf;Integrated Security=True;Connect Timeout=30");
+            Info ip= new Info();
+            ip.Id = int.Parse(textBox1.Text);
+            ip.Name = textBox2.Text;
+            ip.Email = textBox3.Text;
+            Contact cp = new Contact();
+            cp.Id =int.Parse(textBox1.Text);
+            cp.phone = textBox4.Text;
+
+            cntx.Infos.InsertOnSubmit(ip);
+            cntx.Contacts.InsertOnSubmit(cp);
+            cntx.SubmitChanges();
+            getData();
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox3.Clear();
+        }
+
+        private void LinkQ_Load(object sender, EventArgs e)
+        {
+            getData();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MyDBDataContext cntx = new MyDBDataContext(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=D:\Demo\OOP2\Person.mdf;Integrated Security=True;Connect Timeout=30");
+            var str=from a in cntx.Infos 
+                    where a.Id==int.Parse(textBox1.Text)
+                    select a;
+            Info ip = str.First();
+
+            cntx.Infos.DeleteOnSubmit(ip);
+            cntx.SubmitChanges();
+            getData();
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox3.Clear();
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MyDBDataContext cntx = new MyDBDataContext(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=D:\Demo\OOP2\Person.mdf;Integrated Security=True;Connect Timeout=30");
+            var str = from a in cntx.Infos
+                      where a.Id == int.Parse(textBox1.Text)
+                      select a;
+
+            Info ip = str.First();
+            textBox2.Text = ip.Name;
+            textBox3.Text = ip.Email;
+
+            dataGridView1.DataSource = str;
+            
+            
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            MyDBDataContext cntx = new MyDBDataContext(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=D:\Demo\OOP2\Person.mdf;Integrated Security=True;Connect Timeout=30");
+            var str = from a in cntx.Infos
+                      where a.Id == int.Parse(textBox1.Text)
+                      select a;
+
+            Info ip = str.First();
+            ip.Name=textBox2.Text;
+            ip.Email=textBox3.Text;
+            cntx.SubmitChanges();
+            getData();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+             MyDBDataContext cntx = new MyDBDataContext(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=D:\Demo\OOP2\Person.mdf;Integrated Security=True;Connect Timeout=30");
+             var str = from a in cntx.Infos
+                       join b in cntx.Contacts
+                       on a.Id equals b.Id
+                       select new { Id = a.Id, Name = a.Name, Email = a.Email, Phpne = b.phone };
+             dataGridView2.DataSource = str;
+        }
+
+        
+
+    }
+}

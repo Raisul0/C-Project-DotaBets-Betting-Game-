@@ -1,0 +1,10 @@
+F:\Important Documents\Project\Solution1\Login\bin\Debug\Login.exe.config
+F:\Important Documents\Project\Solution1\Login\bin\Debug\Login.exe
+F:\Important Documents\Project\Solution1\Login\bin\Debug\Login.pdb
+F:\Important Documents\Project\Solution1\Login\obj\Debug\Login.csprojResolveAssemblyReference.cache
+F:\Important Documents\Project\Solution1\Login\obj\Debug\Login.Form1.resources
+F:\Important Documents\Project\Solution1\Login\obj\Debug\Login.Properties.Resources.resources
+F:\Important Documents\Project\Solution1\Login\obj\Debug\Login.csproj.GenerateResource.Cache
+F:\Important Documents\Project\Solution1\Login\obj\Debug\Login.exe
+F:\Important Documents\Project\Solution1\Login\obj\Debug\Login.pdb
+F:\Important Documents\Project\Solution1\Login\obj\Debug\Login.Reg.resources
